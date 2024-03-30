@@ -1,6 +1,13 @@
 /* intuitivni box-sizing */
-html { box-sizing: border-box; }
-*, ::after, ::before { box-sizing: inherit; }
+html {
+	box-sizing: border-box;
+}
+
+*,
+::after,
+::before {
+	box-sizing: inherit;
+}
 
 body {
 	font: 16px/1.5 sans-serif;
@@ -13,9 +20,17 @@ body {
 	color: #fff;
 }
 
-.sloupec:nth-child(1) { background-color: #3498db; }
-.sloupec:nth-child(2) { background-color: #e74c3c; }
-.sloupec:nth-child(3) { background-color: #2ecc71; }
+.sloupec:nth-child(1) {
+	background-color: #3498db;
+}
+
+.sloupec:nth-child(2) {
+	background-color: #e74c3c;
+}
+
+.sloupec:nth-child(3) {
+	background-color: #2ecc71;
+}
 
 /*
 Nastav CSS pro třídu .kontejner a .sloupec tak, aby:
@@ -24,3 +39,15 @@ Nastav CSS pro třídu .kontejner a .sloupec tak, aby:
   a budou roztažené přes celou stránku, všechny budou mít stejnou šířku
 */
 
+
+@media screen and (min-width: 800px) {
+
+	.kontejner {
+		display: flex;
+	}
+
+	.sloupec {
+		flex: 1 1 calc(100% / 3)
+	}
+
+}
