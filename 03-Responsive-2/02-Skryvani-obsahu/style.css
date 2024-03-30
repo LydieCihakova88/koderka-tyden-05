@@ -1,6 +1,13 @@
 /* intuitivni box-sizing */
-html { box-sizing: border-box; }
-*, ::after, ::before { box-sizing: inherit; }
+html {
+	box-sizing: border-box;
+}
+
+*,
+::after,
+::before {
+	box-sizing: inherit;
+}
 
 body {
 	font: 16px/1.5 sans-serif;
@@ -15,8 +22,13 @@ body {
 	margin-bottom: 10px;
 }
 
-.banner { background-color: #e74c3c; }
-.obdelnik { background-color: #2ecc71; }
+.banner {
+	background-color: #e74c3c;
+}
+
+.obdelnik {
+	background-color: #2ecc71;
+}
 
 /*
 Nastav CSS pro třídu .banner tak, aby:
@@ -24,3 +36,13 @@ Nastav CSS pro třídu .banner tak, aby:
 - na obrazovce širší než 800px se banner zobrazí
 */
 
+
+.banner {
+	display: none;
+}
+
+@media screen and (min-width: 800px) {
+	.banner {
+		display: block;
+	}
+}
